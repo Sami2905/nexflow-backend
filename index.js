@@ -79,7 +79,7 @@ mongoose.connect(process.env.ATLAS_URI)
     }
     // Only start the server if the database connection is successful
     if (require.main === module) {
-      server.listen(port, () => {
+      server.listen(port, '0.0.0.0', () => {
         console.log(`Server (with Socket.io) is running on port: ${port}`);
       });
     }
